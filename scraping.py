@@ -99,5 +99,6 @@ if __name__ == '__main__':
                         information = line.td.a['href'].strip() if line.td.find('a') else line.td.string.strip()
                     new_city.addAttribut(info_list[categorie][0], information, info_list[categorie][1])
             cities[name] = new_city
+            new_city.infos()
     my_json = json.dumps(cities, default=lambda o: o.__dict__, ensure_ascii=False)
     print(my_json)
