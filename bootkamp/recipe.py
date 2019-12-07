@@ -20,26 +20,22 @@ cookbook = {
     'salad':recette('salad', 15, ['salad', 'verte']) }
 
 def f1():
-    print("Please enter the recipe's name:")
-    name = input().strip()                     
-    print("Please enter the recipe's preparation time:")
-    time = input().strip()
+    name = input("Please enter the recipe's name:").strip()
+    time = input("Please enter the recipe's preparation time:").strip()
     print("Please enter the recipe's ingredients:")
     ingredients = re.sub(r'\s+', ' ', input().strip()).split(' ')
     new = recette(name, time, ingredients)
     cookbook[name] = new
 
 def f2():
-    print("To delete, please enter the recipe's name:")
-    name = input().strip()
+    name = input("To delete, please enter the recipe's name:\n").strip()
     if name in cookbook:
         cookbook.pop(name)
     else:
         print("This recipe remain unknown as we speak.")
 
 def f3():
-    print("Please enter the recipe's name to get its details:")
-    name = input().strip()
+    name = input("Please enter the recipe's name to get its details:").strip()
     if name in cookbook:
         cookbook[name].aff_recipe()
     else:
