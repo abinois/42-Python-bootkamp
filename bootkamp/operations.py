@@ -4,13 +4,11 @@ usage = "Usage: python operations.py <number1> <number2>\nExample:\n\tpython ope
 if len(av) != 3:
     if len(av) > 3:
         print("InputError: too many arguments\n")
-    print(usage)
-    exit()
+    exit(usage)
 for a in av[1::]:
     if not a.isdigit():
         print("InputError: only numbers\n")
-        print(usage)
-        exit()
+        exit(usage)
 op = {
     "Sum:": lambda a, b: a + b,
     "Difference:": lambda a, b: a - b, 
