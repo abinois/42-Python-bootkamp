@@ -6,7 +6,7 @@ def generator(txt, sep=' ', option='default'):
     liste = txt.split(sep)
     dico = {
         'ordered':lambda liste: liste.sort(),
-        'unique':lambda liste: list(dict.fromkeys(liste)),
+        'unique':lambda liste: set(liste),
         'shuffle':lambda liste: shfl(liste),
         'default':lambda liste: True }
     liste = (liste, dico[option](liste))[option == 'unique']
