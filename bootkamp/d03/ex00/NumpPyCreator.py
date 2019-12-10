@@ -36,7 +36,7 @@ class NumPyCreator():
     def identity(self, n):
         if type(n) is not int:
             exit('Not an int.')
-        return identity(n)
+        return identity(n, dtype=self.dtype)
 
 
 if __name__ == '__main__':
