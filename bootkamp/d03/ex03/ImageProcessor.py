@@ -17,7 +17,7 @@ class ImageProcessor():
             exit('Not a Numpy array.')
         rcp['axes.edgecolor'] = 'white' # change all 4 axes color
         rcp['axes.linewidth'] = 1.2
-        rcp['figure.facecolor'] = 'green' # background color
+        rcp['figure.facecolor'] = 'black' # background color
         rcp['xtick.bottom'] = rcp['ytick.left'] = False  # hide little ticks
         plt.title('VOICI UNE IMAGE', {'fontname':'Charter', 'color':'white', 'fontsize':17.0, 'verticalalignment':'bottom'}) # params for title
         plt.xlabel('x', {'fontname':'Arial', 'color':'pink', 'fontsize':13.0}) # params for x axe
