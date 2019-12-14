@@ -8,7 +8,7 @@ Good luck!\n""")
     target = randint(0, 100)
     tries = 0
     while(tries < 7):
-        guess =input("What's your guess between 1 and 99 ?\n")
+        guess = input("What's your guess between 1 and 99 ?\n")
         if guess == 'exit':
             exit('Aurevoir.')
         if not guess.isdigit():
