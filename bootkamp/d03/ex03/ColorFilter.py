@@ -6,7 +6,7 @@ class ColorFilter():
 
     def invert(self, array):
         cp = copy(array)
-        return cp
+        return 1 - cp
 
     def to_blue(self, array):
         cp= copy(array)
@@ -61,8 +61,8 @@ if __name__ == '__main__':
     
     imp = ip()
     filter = ColorFilter()
-    arr1 = imp.load('../ex01/42AI.png')
-    #arr1 = imp.load('landscape.png')
+    # arr1 = imp.load('../ex01/42AI.png')
+    arr1 = imp.load('landscape.png')
     #print(arr1.shape)
     imp.display(arr1)
     imp.display(filter.invert(arr1))

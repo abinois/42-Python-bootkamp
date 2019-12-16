@@ -66,5 +66,5 @@ if __name__ == '__main__':
     imp = ip()
     arr1 = imp.load('../ex03/landscape.png')
     filter = AdvancedFilter()
-    imp.display(filter.mean_blur(arr1, 11))
-    imp.display(filter.gaussian_blur(arr1, 11))
+    imp.display(filter.mean_blur(arr1, 5))
+    imp.display(filter.gaussian_blur(arr1, 5))
