@@ -10,7 +10,6 @@ def what_are_the_vars(*args, **kwargs):
         if search(r'^var_.*', name):
             return None
         setattr(o, name, val)
-        i += 1
     return o
 
 class ObjectC(object):

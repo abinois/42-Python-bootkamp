@@ -8,11 +8,11 @@ def YoungestFellah(df, year):
     sub_data = df[df.Year == year].sort_values('Age')
     if sub_data.empty is True:
         exit('Not an Olympic year.')
-    dudes = sub_data[sub_data.Sex == 'M']
-    chicks = sub_data[sub_data.Sex == 'F']
+    dudes = sub_data[sub_data.Sex == 'M'].reset_index()
+    chicks = sub_data[sub_data.Sex == 'F'].reset_index()
     dic = {
-        dudes.loc[dudes.index[0]].Sex: dudes.Age.min(),
-        chicks.loc[chicks.index[0]].Sex: chicks.Age.min() }
+        dudes.loc[0, 'Sex']: dudes.loc[0, 'Age'],
+        chicks.loc[0, 'Sex']: chicks.loc[0, 'Age']}
     return dic
 
 if __name__ == '__main__':
