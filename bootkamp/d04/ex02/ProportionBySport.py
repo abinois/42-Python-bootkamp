@@ -1,5 +1,4 @@
 from FileLoader import FileLoader
-import pandas as pd
 
 def proportionBySport(df, year, sport, gender):
     sub_data = df[(df.Year == year) & (df.Sex == gender)].drop_duplicates('Name')

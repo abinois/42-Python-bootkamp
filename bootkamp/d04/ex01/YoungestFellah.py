@@ -6,7 +6,7 @@ def YoungestFellah(df, year):
     if type(df) is not pd.DataFrame or type(year) is not int or year < 1:
         exit('Wrong parameters.')
     sub_data = df[df.Year == year].sort_values('Age')
-    if sub_data.empty is True:
+    if sub_data.empty:
         exit('Not an Olympic year.')
     dudes = sub_data[sub_data.Sex == 'M'].reset_index()
     chicks = sub_data[sub_data.Sex == 'F'].reset_index()
